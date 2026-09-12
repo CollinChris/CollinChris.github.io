@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Context Packer — any page to LLM-ready Markdown</title>
+  <meta name="description" content="Chrome extension: turn any page, GitHub PR thread, or code file into clean LLM-ready Markdown with token estimates — copied in one click. 100% local.">
+  <style>
+    :root {
+      --bg: #0a0d12; --card: #161b23; --border: #242b36;
+      --fg: #f2f5f9; --muted: #97a2b4; --primary: #3b9eff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; color: var(--fg);
+      background: radial-gradient(120% 80% at 50% 0%, #141b26 0%, var(--bg) 55%);
+      font: 16px/1.6 system-ui, sans-serif;
+    }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+    header.hero { text-align: center; padding: 72px 0 40px; }
+    .logo { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+    .logo img { width: 44px; height: 44px; border-radius: 11px; }
+    .logo span { font-size: 20px; font-weight: 700; }
+    h1 { font-size: clamp(30px, 5vw, 44px); margin: 0 0 14px; letter-spacing: -0.02em; line-height: 1.15; }
+    h1 b { color: var(--primary); font-weight: 700; }
+    .sub { color: var(--muted); max-width: 560px; margin: 0 auto 28px; font-size: 17px; }
+    .cta {
+      display: inline-block; background: var(--primary); color: #06131f;
+      font-weight: 600; padding: 12px 26px; border-radius: 12px; text-decoration: none;
+      border: 1px solid var(--primary);
+    }
+    .cta.soon { background: var(--card); color: var(--muted); border-color: var(--border); cursor: default; }
+    .cta-note { display: block; margin-top: 10px; color: var(--muted); font-size: 13px; }
+    .shot { margin: 44px auto 0; max-width: 860px; }
+    .shot img {
+      width: 100%; border-radius: 16px; border: 1px solid var(--border);
+      box-shadow: 0 24px 80px rgba(0,0,0,0.55);
+    }
+    section.features { padding: 56px 0 8px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+    .card .emoji { font-size: 24px; }
+    .card h2 { font-size: 15px; margin: 10px 0 6px; }
+    .card p { font-size: 13.5px; color: var(--muted); margin: 0; }
+    section.privacy { padding: 40px 0 8px; }
+    .privacy-box {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 20px 22px; display: flex; gap: 14px; align-items: flex-start;
+    }
+    .privacy-box .emoji { font-size: 22px; }
+    .privacy-box p { margin: 0; font-size: 14px; color: var(--muted); }
+    .privacy-box b { color: var(--fg); }
+    a { color: var(--primary); }
+    footer { padding: 40px 0 48px; text-align: center; color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="logo"><img src="icon128.png" alt=""><span>Context Packer</span></div>
+      <h1>Any page → <b>LLM-ready Markdown</b>,<br>one click.</h1>
+      <p class="sub">Stop fighting nav bars and broken formatting when you paste into ChatGPT or Claude. Pack GitHub PR threads, code files, and articles into clean, structured context — with a token estimate before you spend it.</p>
+      <span class="cta soon" id="install-cta">⏳ In review — coming to the Chrome Web Store</span>
+      <span class="cta-note">Submitted September 2026 · this page will link the listing the moment it's live</span>
+      <div class="shot"><img src="screenshot-1.png" alt="Context Packer popup showing the onboarding guide next to the tagline: any page to LLM-ready Markdown in one click"></div>
+    </header>
+
+    <section class="features">
+      <div class="cards">
+        <div class="card">
+          <div class="emoji">🧵</div>
+          <h2>GitHub PR threads</h2>
+          <p>Title, state, description, the full conversation with authors and timestamps, review threads with file context, changed files. Works on private repos and GitHub Enterprise — it reads the page you're on, no tokens or API access.</p>
+        </div>
+        <div class="card">
+          <div class="emoji">📄</div>
+          <h2>Code files &amp; articles</h2>
+          <p>Blob pages become one clean fenced code block headed by repo, path and branch. Docs and articles get Readability extraction — headings and links preserved, nav junk gone.</p>
+        </div>
+        <div class="card">
+          <div class="emoji">🎯</div>
+          <h2>Precision &amp; budget</h2>
+          <p>Pack a selection, or the raw full page as a fallback. Every pack carries a title/URL/date header and a token estimate, so you know what the context costs before you paste.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="privacy">
+      <div class="privacy-box">
+        <div class="emoji">🔒</div>
+        <p><b>100% local, by design.</b> No accounts, no servers, no analytics, no network requests. Pages are converted on your machine and land on your clipboard — nothing else, ever. Read the <a href="privacy.html">privacy policy</a>.</p>
+      </div>
+    </section>
+
+    <footer>
+      Built by <a href="https://collinchris.github.io/">Collin Christopher See</a> · <a href="privacy.html">Privacy</a>
+    </footer>
+  </div>
+</body>
+</html>
