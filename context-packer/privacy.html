@@ -49,7 +49,8 @@
   <ul>
     <li><strong>activeTab / scripting</strong> — used to read the page you
       explicitly invoke the extension on. The extension has no access to any
-      other tabs and does not run in the background.</li>
+      other tabs. Its only background behavior is opening the welcome page
+      once, on install; it never reads or monitors pages on its own.</li>
     <li><strong>clipboardWrite</strong> — used to deliver the generated
       Markdown to your clipboard.</li>
   </ul>
