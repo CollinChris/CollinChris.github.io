@@ -148,7 +148,45 @@
         </div>
 
         <div class="cards-featured">
+
           <article class="card card-featured reveal">
+            <div class="card-top">
+              <h3><a href="https://collinchris.github.io/context-packer/" target="_blank" rel="noopener">Context Packer</a></h3>
+              <a class="badge" href="https://chromewebstore.google.com/detail/context-packer-%E2%80%94-pages-pr/kkhafomagjdpdmlpngbjgjemefbimelj" target="_blank" rel="noopener">Chrome Web Store ↗</a>
+            </div>
+            <p>
+              A Chrome extension that turns any page, GitHub PR thread, or code file into
+              clean LLM-ready Markdown with token estimates — one click, copied to the
+              clipboard. Specialized DOM extractors for PR review threads and code blobs,
+              generic Readability fallback elsewhere. Runs 100% locally with activeTab-only
+              permissions; verified by a Playwright suite that packs live GitHub pages on
+              every change.
+            </p>
+            <ul class="tags" aria-label="Technologies used">
+              <li>TypeScript</li><li>Chrome MV3</li><li>esbuild</li><li>Playwright</li>
+            </ul>
+          </article>
+
+          <article class="card card-featured reveal" style="--i:1">
+            <div class="card-top">
+              <h3><a href="https://github.com/CollinChris/systemdesign" target="_blank" rel="noopener">Daily System-Design Fact Bot</a></h3>
+              <a class="card-ext" href="https://github.com/CollinChris/systemdesign" target="_blank" rel="noopener" aria-label="Daily System-Design Fact Bot on GitHub">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+              </a>
+            </div>
+            <p>
+              I wanted an excuse to run scheduled code in production, so I built a bot that teaches
+              me system design. A GitHub Actions cron job (the free-tier scheduler) fires daily at
+              1pm SGT and sends one curated fact or quiz to my Telegram. Sent-state survives
+              ephemeral runners by committing back to the repo, and when fewer than seven unsent
+              entries remain it tops up its own content bank via the Gemini API, with retry/backoff
+              and a fallback model for rate limits. Typed, linted, and covered by 45 tests.
+            </p>
+            <ul class="tags" aria-label="Technologies used">
+              <li>Python 3.12</li><li>uv</li><li>GitHub Actions</li><li>Telegram Bot API</li><li>Gemini API</li><li>pytest / mypy / ruff</li>
+            </ul>
+          </article>
+          <article class="card card-featured reveal" style="--i:2">
             <div class="card-top">
               <h3>Compliance-Check Agentic RAG</h3>
               <span class="badge">Details under NDA</span>
@@ -164,27 +202,7 @@
             </ul>
           </article>
 
-          <article class="card card-featured reveal" style="--i:1">
-            <div class="card-top">
-              <h3><a href="https://github.com/CollinChris/systemdesign" target="_blank" rel="noopener">Daily System-Design Fact Bot</a></h3>
-              <a class="card-ext" href="https://github.com/CollinChris/systemdesign" target="_blank" rel="noopener" aria-label="Daily System-Design Fact Bot on GitHub">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
-              </a>
-            </div>
-            <p>
-              I wanted an excuse to run scheduled code in production, so I built a bot that teaches
-              me system design. A GitHub Actions cron job (the free-tier scheduler) fires daily at
-              1pm SGT and sends one curated fact or quiz to my Telegram. Sent-state survives
-              ephemeral runners by committing back to the repo, and when fewer than three unsent
-              entries remain it replenishes its own content bank via the Gemini API. Typed, linted,
-              and tested per module.
-            </p>
-            <ul class="tags" aria-label="Technologies used">
-              <li>Python 3.12</li><li>uv</li><li>GitHub Actions</li><li>Telegram Bot API</li><li>Gemini API</li><li>pytest / mypy / ruff</li>
-            </ul>
-          </article>
-
-          <article class="card card-featured reveal" style="--i:2">
+          <article class="card card-featured reveal" style="--i:3">
             <div class="card-top">
               <h3><a href="https://collinchris.github.io/body-map/" target="_blank" rel="noopener">Body Map — Interactive Anatomy Guide</a></h3>
               <a class="card-ext" href="https://github.com/CollinChris/body-map" target="_blank" rel="noopener" aria-label="Body Map on GitHub">
@@ -201,24 +219,6 @@
             </p>
             <ul class="tags" aria-label="Technologies used">
               <li>Next.js</li><li>TypeScript</li><li>Tailwind CSS</li><li>framer-motion</li><li>SVG</li><li>GitHub Actions</li>
-            </ul>
-          </article>
-
-          <article class="card card-featured reveal" style="--i:3">
-            <div class="card-top">
-              <h3><a href="https://collinchris.github.io/context-packer/" target="_blank" rel="noopener">Context Packer</a></h3>
-              <a class="badge" href="https://chromewebstore.google.com/detail/context-packer-%E2%80%94-pages-pr/kkhafomagjdpdmlpngbjgjemefbimelj" target="_blank" rel="noopener">Chrome Web Store ↗</a>
-            </div>
-            <p>
-              A Chrome extension that turns any page, GitHub PR thread, or code file into
-              clean LLM-ready Markdown with token estimates — one click, copied to the
-              clipboard. Specialized DOM extractors for PR review threads and code blobs,
-              generic Readability fallback elsewhere. Runs 100% locally with activeTab-only
-              permissions; verified by a Playwright suite that packs live GitHub pages on
-              every change.
-            </p>
-            <ul class="tags" aria-label="Technologies used">
-              <li>TypeScript</li><li>Chrome MV3</li><li>esbuild</li><li>Playwright</li>
             </ul>
           </article>
         </div>
@@ -346,13 +346,13 @@
           <div class="skill-group reveal">
             <h3>AI / ML</h3>
             <ul class="chips">
-              <li>Neural Networks</li><li>Agentic RAG</li><li>LLM Workflows</li><li>PyTorch</li><li>Azure AI Services</li>
+              <li>Agentic RAG</li><li>LLM Workflows</li><li>Neural Networks</li><li>PyTorch</li><li>Azure AI Services</li><li>Gemini API</li>
             </ul>
           </div>
           <div class="skill-group reveal" style="--i:1">
-            <h3>Data &amp; Analytics</h3>
+            <h3>Engineering &amp; Data</h3>
             <ul class="chips">
-              <li>Python</li><li>SQL</li><li>Power BI</li><li>Excel Power Query</li>
+              <li>Python</li><li>TypeScript</li><li>SQL</li><li>GitHub Actions (CI/CD)</li>
             </ul>
           </div>
           <div class="skill-group reveal" style="--i:2">
